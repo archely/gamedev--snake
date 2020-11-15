@@ -9,6 +9,7 @@ import random
 import sys
 import time
 
+
 # Difficulty settings
 # Easy      ->  10
 # Medium    ->  25
@@ -31,8 +32,9 @@ if check_errors[1] > 0:
 else:
     print('[+] Game successfully initialised')
 
+
 # Initialise game window
-pygame.display.set_caption('Snake Eater')
+pygame.display.set_caption('Arda Burak Atila OL1BB5 snake')
 game_window = pygame.display.set_mode((frame_size_x, frame_size_y))
 
 # Colors (R, G, B)
@@ -162,7 +164,7 @@ while True:
         if snake_pos[0] == block[0] and snake_pos[1] == block[1]:
             game_over()
 
-    show_score(1, white, 'consolas', 20)
+    show_score(1, white, 'consoles', 20)
     # Refresh game screen
     pygame.display.update()
     # Refresh rate
