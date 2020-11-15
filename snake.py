@@ -4,8 +4,10 @@ Snake
 neptun code: OL1BB5
 """
 
-import pygame, sys, time, random
-
+import pygame
+import random
+import sys
+import time
 
 # Difficulty settings
 # Easy      ->  10
@@ -29,12 +31,9 @@ if check_errors[1] > 0:
 else:
     print('[+] Game successfully initialised')
 
-
 # Initialise game window
 pygame.display.set_caption('Snake Eater')
 game_window = pygame.display.set_mode((frame_size_x, frame_size_y))
-
-
 
 # Colors (R, G, B)
 black = pygame.Color(0, 0, 0)
@@ -43,16 +42,14 @@ red = pygame.Color(255, 0, 0)
 green = pygame.Color(0, 255, 0)
 blue = pygame.Color(0, 0, 255)
 
-
 # FPS (frames per second) controller
 fps_controller = pygame.time.Clock()
 
-
 # Game variables
 snake_pos = [100, 50]
-snake_body = [[100, 50], [100-10, 50], [100-(2*10), 50]]
+snake_body = [[100, 50], [100 - 10, 50], [100 - (2 * 10), 50]]
 
-food_pos = [random.randrange(1, (frame_size_x//10)) * 10, random.randrange(1, (frame_size_y//10)) * 10]
+food_pos = [random.randrange(1, (frame_size_x // 10)) * 10, random.randrange(1, (frame_size_y // 10)) * 10]
 food_spawn = True
 
 direction = 'RIGHT'
@@ -66,7 +63,7 @@ def game_over():
     my_font = pygame.font.SysFont('times new roman', 90)
     game_over_surface = my_font.render('GAME OVER', True, red)
     game_over_rect = game_over_surface.get_rect()
-    game_over_rect.midtop = (frame_size_x/2, frame_size_y/4)
+    game_over_rect.midtop = (frame_size_x / 2, frame_size_y / 4)
     game_window.fill(black)
     game_window.blit(game_over_surface, game_over_rect)
     show_score(0, red, 'times', 20)
@@ -82,9 +79,9 @@ def show_score(choice, color, font, size):
     score_surface = score_font.render('Score : ' + str(score), True, color)
     score_rect = score_surface.get_rect()
     if choice == 1:
-        score_rect.midtop = (frame_size_x/10, 15)
+        score_rect.midtop = (frame_size_x / 10, 15)
     else:
-        score_rect.midtop = (frame_size_x/2, frame_size_y/1.25)
+        score_rect.midtop = (frame_size_x / 2, frame_size_y / 1.25)
     game_window.blit(score_surface, score_rect)
     # pygame.display.flip()
 
@@ -140,7 +137,7 @@ while True:
 
     # Spawning food on the screen
     if not food_spawn:
-        food_pos = [random.randrange(1, (frame_size_x//10)) * 10, random.randrange(1, (frame_size_y//10)) * 10]
+        food_pos = [random.randrange(1, (frame_size_x // 10)) * 10, random.randrange(1, (frame_size_y // 10)) * 10]
     food_spawn = True
 
     # GFX
@@ -156,9 +153,9 @@ while True:
 
     # Game Over conditions
     # Getting out of bounds
-    if snake_pos[0] < 0 or snake_pos[0] > frame_size_x-10:
+    if snake_pos[0] < 0 or snake_pos[0] > frame_size_x - 10:
         game_over()
-    if snake_pos[1] < 0 or snake_pos[1] > frame_size_y-10:
+    if snake_pos[1] < 0 or snake_pos[1] > frame_size_y - 10:
         game_over()
     # Touching the snake body
     for block in snake_body[1:]:
