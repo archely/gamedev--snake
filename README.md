@@ -1,10 +1,10 @@
 # gamedev
 Game Development project -- Snake-- Arda Burak Atila -- OL1BB5
 
-
-![Screenshot_20201115_015332](https://user-images.githubusercontent.com/56447709/99160337-a48d7680-26e6-11eb-91dd-50f7fcefb885.png)
-
+![Screenshot_20201115_023344](https://user-images.githubusercontent.com/56447709/99160790-3303f700-26eb-11eb-8364-bee184773cc1.png)
 
 
-![Screenshot_20201115_015436](https://user-images.githubusercontent.com/56447709/99160338-a5bea380-26e6-11eb-975b-019d06b95772.png)
+
+![Screenshot_20201115_023329](https://user-images.githubusercontent.com/56447709/99160793-35665100-26eb-11eb-90bd-7802e85a8967.png)
+
 
