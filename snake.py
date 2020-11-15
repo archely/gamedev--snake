@@ -35,6 +35,7 @@ pygame.display.set_caption('Snake Eater')
 game_window = pygame.display.set_mode((frame_size_x, frame_size_y))
 
 
+
 # Colors (R, G, B)
 black = pygame.Color(0, 0, 0)
 white = pygame.Color(255, 255, 255)
