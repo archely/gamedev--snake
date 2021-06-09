@@ -7,7 +7,7 @@ Clone this repository.
 
 ```bash
 git clone --
-cd ParNote
+cd gamedev--sanke
 ```
 
 ##### Compile & Run & Debug
